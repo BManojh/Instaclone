@@ -8,3 +8,17 @@
 .logo-text{
     width:200px;
 }
+.bi{
+    margin-right: 10px;
+    font-size: large;
+    font-family: bold;
+}
+.story{
+    height: 70px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.post
+{   
+    width:70%;
+}
