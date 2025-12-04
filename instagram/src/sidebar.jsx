@@ -1,11 +1,14 @@
 import React from 'react'
-import logo from './assets/images.png'
+import { useActionData, useNavigate } from 'react-router-dom'
 
 function Sidebar() {
+
+  const navigate = useNavigate();
+
   return (
-    <div className="m-3 position-fixed">
+    <div className="m-3">
         <div className="d-flex flex-column gap-4 ">
-        <img className="logo-text" src={logo} alt="Instagram logo" />
+        <img className="logo-text" src="/assets/images.png"></img>
         <div><i className="bi bi-house-door"></i>Home</div>
         <div><i className="bi bi-search"></i>Search</div>
         <div><i className="bi bi-compass-fill"></i>Explore</div>
@@ -13,7 +16,7 @@ function Sidebar() {
         <div><i className="bi bi-chat-left-dots"></i>Messages</div>
         <div><i className="bi bi-bell-fill"></i>Notifications</div>
         <div><i className="bi bi-plus-square-fill"></i>Create</div>
-        <div><i className="bi bi-person-circle"></i>Profile</div>
+        <div onClick={()=>{navigate('/profile')}}><i className="bi bi-person-circle"></i>Profile</div>
         </div>
    
     <div className="position-fixed bottom-0 d-flex flex-column gap-3 mb-3">

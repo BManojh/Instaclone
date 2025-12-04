@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 
 function Suggestion() {
 
@@ -16,14 +17,20 @@ function Suggestion() {
       .then((data) => setSuggestion(data))
       .catch((err) => console.log(err));
   }, []);  
+
+  const handle =async (id,username)=>
+  {
+    axios.post("http://localhost:5000/followers",{"id":id,"username":username})
+    .then(alert("followed"))
+  }
   
 
-  return (
+  return ( 
     <div>
       {profile && (
-        <div className="suggestions w-75 m-4">
+        <div className="suggestions w-75 m-4">  
 
-          <div className="d-flex align-items-center mb-2">
+          <div className="d-flex align-items-center mb-2 gap-4">
             <img
               src={profile.profilePic}
               style={{ width: "40px", height: "40px", borderRadius: "50%", marginRight: "10px" }}
@@ -54,7 +61,8 @@ function Suggestion() {
                     <small>{post.mutual} mutual followers</small>
                   </div>
 
-                  <button className="ms-auto btn btn-sm btn-primary rounded-pill px-3">
+                  <button className="ms-auto btn btn-sm btn-primary rounded-pill px-3"
+                  onClick={()=>handle(post.id,post.username)}>
                     Follow
                   </button>
 

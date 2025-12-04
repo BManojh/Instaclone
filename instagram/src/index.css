@@ -14,15 +14,15 @@
     font-family: bold;
 }
 .story{
-    height: 70px;
-    padding: 10px;
+    height: 80px;
+    padding: 20px;
 }
 .post
 {   
-    width:70%;
+    width:90%;
 }
 .suggestion h6{
-    font-size:16px;
+    font-size:24px;
 } 
 .suggestion.dp{
     margin-top: 0px !important;
@@ -38,5 +38,5 @@
 }
 .story-db
 {
-    width: 40px;
+    width: 50px;
 }
