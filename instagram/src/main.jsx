@@ -5,6 +5,7 @@ import App from './App.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom' 
 import Viewstory from './viewstory.jsx'
 import Profile from './profile.jsx'
+import Reels from './reels.jsx'
 
 
 const router=createBrowserRouter([
@@ -19,6 +20,10 @@ const router=createBrowserRouter([
   {
     path:'/profile',
     element:<Profile/>
+  },
+  {
+    path:'/reels',
+    element:<Reels/>
   }
 ])
 createRoot(document.getElementById('root')).render(

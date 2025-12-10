@@ -9,10 +9,10 @@ function Sidebar() {
     <div className="m-3">
         <div className="d-flex flex-column gap-4 ">
         <img className="logo-text" src="/assets/images.png"></img>
-        <div><i className="bi bi-house-door"></i>Home</div>
+        <div onClick={()=>navigate('/')}><i className="bi bi-house-door"></i>Home</div>
         <div><i className="bi bi-search"></i>Search</div>
         <div><i className="bi bi-compass-fill"></i>Explore</div>
-        <div><i className="bi bi-play-btn-fill"></i>Reels</div>
+        <div onClick={()=>navigate('/reels')}><i className="bi bi-play-btn-fill"></i>Reels</div>
         <div><i className="bi bi-chat-left-dots"></i>Messages</div>
         <div><i className="bi bi-bell-fill"></i>Notifications</div>
         <div><i className="bi bi-plus-square-fill"></i>Create</div>
