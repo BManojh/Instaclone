@@ -6,24 +6,30 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Viewstory from './viewstory.jsx'
 import Profile from './profile.jsx'
 import Reels from './reels.jsx'
+import Login from './Login.jsx'
+import ProtectedRoute from './ProtectedRoute.jsx'
 
 
 const router=createBrowserRouter([
   {
+    path:'/login',
+    element:<Login/>
+  },
+  {
     path:'/',
-    element:<App/>
+    element:<ProtectedRoute><App/></ProtectedRoute>
   },
   {
     path:'/story/:id/:tot',
-    element:<Viewstory/>
+    element:<ProtectedRoute><Viewstory/></ProtectedRoute>
   },
   {
     path:'/profile',
-    element:<Profile/>
+    element:<ProtectedRoute><Profile/></ProtectedRoute>
   },
   {
     path:'/reels',
-    element:<Reels/>
+    element:<ProtectedRoute><Reels/></ProtectedRoute>
   }
 ])
 createRoot(document.getElementById('root')).render(

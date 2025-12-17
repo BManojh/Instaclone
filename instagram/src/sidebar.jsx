@@ -5,6 +5,13 @@ function Sidebar() {
 
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem('isAuthenticated')
+    localStorage.removeItem('userId')
+    localStorage.removeItem('username')
+    navigate('/login')
+  }
+
   return (
     <div className="m-3">
         <div className="d-flex flex-column gap-4 ">
@@ -22,6 +29,7 @@ function Sidebar() {
     <div className="position-fixed bottom-0 d-flex flex-column gap-3 mb-3">
         <div><i className="bi bi-threads"></i>Threads</div>
         <div><i className="bi bi-list"></i>More</div>
+        <div onClick={handleLogout} style={{cursor: 'pointer'}}><i className="bi bi-box-arrow-right"></i>Logout</div>
     </div> 
      </div>
     
