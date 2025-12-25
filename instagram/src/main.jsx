@@ -6,6 +6,7 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Viewstory from './viewstory.jsx'
 import Profile from './profile.jsx'
 import Reels from './reels.jsx'
+import Explore from './explore.jsx'
 import Login from './Login.jsx'
 import ProtectedRoute from './ProtectedRoute.jsx'
 
@@ -30,9 +31,12 @@ const router=createBrowserRouter([
   {
     path:'/reels',
     element:<ProtectedRoute><Reels/></ProtectedRoute>
+  },
+  {
+    path:'/explore',
+    element:<ProtectedRoute><Explore/></ProtectedRoute>
   }
 ])
 createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}/>
-
 )

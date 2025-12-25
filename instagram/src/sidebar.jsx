@@ -1,5 +1,5 @@
 import React from 'react'
-import { useActionData, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Sidebar() {
 
@@ -18,7 +18,7 @@ function Sidebar() {
         <img className="logo-text" src="/assets/images.png"></img>
         <div onClick={()=>navigate('/')}><i className="bi bi-house-door"></i>Home</div>
         <div><i className="bi bi-search"></i>Search</div>
-        <div><i className="bi bi-compass-fill"></i>Explore</div>
+        <div onClick={()=>navigate('/explore')}><i className="bi bi-compass-fill"></i>Explore</div>
         <div onClick={()=>navigate('/reels')}><i className="bi bi-play-btn-fill"></i>Reels</div>
         <div><i className="bi bi-chat-left-dots"></i>Messages</div>
         <div><i className="bi bi-bell-fill"></i>Notifications</div>
